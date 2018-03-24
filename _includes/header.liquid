@@ -3,15 +3,23 @@
   }
 
   header .site-title {
-    padding: 2em 2rem;
-    font-size: 4em;
+    padding: 1.5em 2rem;
+    font-size: 2em;
+  }
+  @media only screen and (min-width:700px) {
+    header .site-title.home {
+      font-size: 4em;
+    }
+  }
+  header .site-title a {
+    text-decoration: none;
   }
 </style>
 
 <header>
   {% if site.title %}
-    <section class="site-title">
-      {{ site.title }}
+    <section class="site-title {% if page.url == '/' %} home {% endif %}">
+      <a href="{{ site.url }}">{{ site.title }}</a>
     </section>
   {% endif %}
 </header>
