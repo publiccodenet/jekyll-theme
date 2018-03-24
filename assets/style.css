@@ -1,0 +1,43 @@
+/* GENERAL */
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid black;
+}
+body>hr {
+  margin: 0;
+}
+
+nav.foundation-nav, header, main, footer {
+  background: white;
+  max-width: 60em;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+  max-width: 30em
+}
+
+a:link, a:visited {
+  color: black;
+}
+a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+main article {
+  padding: 2em;
+}
+
+/* IMPORTS */
+
+@import url("github-markdown.css");
+@import url("rouge-highlight.css");
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700');

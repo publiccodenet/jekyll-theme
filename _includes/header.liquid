@@ -1,0 +1,17 @@
+<style>
+  header {
+  }
+
+  header .site-title {
+    padding: 2em 2rem;
+    font-size: 4em;
+  }
+</style>
+
+<header>
+  {% if site.title %}
+    <section class="site-title">
+      {{ site.title }}
+    </section>
+  {% endif %}
+</header>

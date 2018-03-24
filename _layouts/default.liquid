@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.liquid %}
+
+  <body>
+
+    {% include foundation-nav.liquid %}
+
+    <hr>
+    
+    {% include header.liquid %}
+
+    <hr>
+
+    <main>
+      <article class="github-markdown">
+        {{ content }}
+      </article>
+    </main>
+
+    <hr>
+
+    {% include footer.liquid %}
+
+  </body>
+
+</html>

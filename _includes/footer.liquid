@@ -1,0 +1,25 @@
+<style>
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  footer section {
+    padding: 1rem;
+  }
+</style>
+
+<footer>
+  {{ if site.github }}
+    <section>
+      <h3>This project on GitHub</h3>
+      <ul>
+        <li><a href="{{ site.github.repository_url }}">{{ site.github.owner_name }}/{{ site.github.repository_name }}</a></li>
+        <li><a class="github-button" href="{{ site.github.repository_url }}" data-icon="octicon-star" data-count-href="{{ site.github_username }}/{{ github_repo }}/stargazers" data-count-api="/repos/{{ site.github_username }}/{{ github_repo }}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star {{ site.github_username }}/{{ github_repo }} on GitHub">Star</a></li>
+        <li><a class="github-button" href="{{ site.github.repository_url }}/issues" data-icon="octicon-issue-opened" aria-label="Issue ntkme/github-buttons on GitHub" data-show-count="true">Issue</a></li>
+      </ul>
+    </section>
+  {{ endif }}
+</footer>
