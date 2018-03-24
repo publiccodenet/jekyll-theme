@@ -44,3 +44,16 @@ a:hover {
 main article {
   padding: 4em 2em;
 }
+main .edit-links {
+  text-align: right;
+  padding: 1em 2em;
+}
+main .edit-links a {
+  padding: 0.5em;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 2px;
+}
+main .edit-links a svg {
+  vertical-align: -2px;
+}

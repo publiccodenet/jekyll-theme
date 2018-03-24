@@ -14,9 +14,17 @@
     <hr>
 
     <main>
-      <article class="markdown-body">
-        {{ content }}
-      </article>
+      <section class="content">
+        <article class="markdown-body">
+          {{ content }}
+        </article>
+        {% if site.github.repository_url %}
+        <div class="edit-links">
+          <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">{% include github-pr.svg %} Improve this page.</a>
+          <a href="{{ site.github.repository_url }}/issues/new?body=I'd like to report an issue in `{{ page.path }}`">{% include github-issue.svg %} File an Issue</a>
+        </div>
+        {% endif %}
+      </section>
     </main>
 
     <hr>
