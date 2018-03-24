@@ -6,6 +6,8 @@ A jekyll theme for the set up of quick generic static sites and for use with Git
 
 This theme is built to run predictably on GitHub pages, therefore the [`github-pages`](https://github.com/github/pages-gem) gem is required. Run `bundle install` before building with Jekyll.
 
+To serve locally with Jekyll, use `bundle exec jekyll serve`.
+
 ## Licence
 
 © Foundation For Public Code 2018
