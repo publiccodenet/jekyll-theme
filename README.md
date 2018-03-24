@@ -1,2 +1,3 @@
-# jekyll-theme
-A Foundation For Public Code jekyll theme for use with GitHub pages.
+# Foundation For Public Code Jekyll Theme
+
+A jekyll theme for the set up of quick generic static sites and for use with GitHub pages.
