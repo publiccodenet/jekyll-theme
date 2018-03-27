@@ -20,7 +20,8 @@
         </article>
         {% if site.github.repository_url %}
         <div class="edit-links">
-          <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">{% include github-pr.svg %} Improve this page.</a>
+          <!-- The default branch is {% for repo in site.github.public_repositories %}{% if repo.name == site.github.repository_name %}{% assign default_branch = repo.default_branch %}{% endif %}{% endfor %}{{ default_branch }}, while site.github.source.branch is {{ site.github.source.branch }} -->
+          <a href="{{ site.github.repository_url }}/edit/{{ default_branch }}/{{ page.path }}">{% include github-pr.svg %} Improve this page.</a>
           <a href="{{ site.github.repository_url }}/issues/new?body=I'd like to report an issue in `{{ page.path }}`">{% include github-issue.svg %} File an Issue</a>
         </div>
         {% endif %}
