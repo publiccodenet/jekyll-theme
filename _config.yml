@@ -1,2 +1,9 @@
 title: The Foundation For Public Code Jekyll Theme
 permalinks: pretty
+
+plugins:
+  - jekyll-feed
+
+# Exclude the `vendor` folder created by Travis
+exclude:
+  - vendor
