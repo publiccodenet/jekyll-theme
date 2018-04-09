@@ -2,7 +2,8 @@
   footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 1rem;
   }
 
@@ -12,7 +13,7 @@
 </style>
 
 <footer>
-  {{ if site.github }}
+  <!-- GitHub repository information -->{% if site.github %}
     <section>
       <h3>This project on GitHub</h3>
       <ul>
@@ -21,5 +22,37 @@
         <li><a class="github-button" href="{{ site.github.repository_url }}/issues" data-icon="octicon-issue-opened" aria-label="Issue ntkme/github-buttons on GitHub" data-show-count="true">Issue</a></li>
       </ul>
     </section>
-  {{ endif }}
+  {% endif %}
+
+  <!-- License information -->
+  {% assign license = site.license | default site.github.license %}
+  {% if license %}
+    <section>
+      <h3>Copyright and license</h3>
+      <p>
+        © {{ site.time | date: '%Y' }} 
+        {% for static_file in site.static_files %}
+          {% if static_file.path == '/AUTHORS.md' %}
+              {% assign authors_file = true %}
+          {% endif %}
+        {% endfor %}
+        {% if authors_file != true %}<a href="https://publiccode.net/">
+          {{ site.copyright | default: 'Foundation For Public Code' }}
+        </a>{% endif %}
+        {% if authors_file %}<a href="{{ site.baseurl }}/AUTHORS.html">
+          {{ site.copyright | default: ' The Authors' }}
+        </a>{% endif %}
+      </p>
+      <p>
+        {% for static_file in site.static_files %}
+          {% if static_file.path == '/LICENSE.md' %}
+              {% assign license_file = true %}
+          {% endif %}
+        {% endfor %}
+        {% if license_file %}<a href="{{ site.baseurl }}/LICENSE.html">{% endif %}
+        {{ license.name }}
+        {% if license_file %}</a>{% endif %}
+      </p>
+    </section>
+  {% endif %}
 </footer>
