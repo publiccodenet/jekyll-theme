@@ -10,6 +10,18 @@ This theme is built to run predictably on GitHub pages, therefore the [`github-p
 
 To serve locally with Jekyll, use `bundle exec jekyll serve`.
 
+## Customising
+
+### Table of contents
+
+#### For your whole site
+
+You can turn on the display of Table of Contents ('On this page' section) for any page by adding `toc: true` to the `_config.yml` 
+
+#### For just a specific page
+
+Or adding `toc: true` to the front matter of any page where you want the Table of Contents to display.
+
 ## Licence
 
 © Foundation For Public Code 2018
