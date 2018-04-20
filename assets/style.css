@@ -41,18 +41,50 @@ a:hover {
   background: rgba(0,0,0,0.05);
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2em;
+}
+main aside {
+  flex: 1;
+  padding: 2em;
+}
+main aside h4 {
+  color: #ddd;
+}
+main aside ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+main aside li {
+  margin: .5em 0;
+}
+main aside>ul>li {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+main aside>ul>li>ul>li {
+  font-weight: normal;
+}
+main aside>ul>li>ul>li ul {
+  padding-left: 1em;
+}
+
 main article {
-  padding: 4em 2em;
+  padding: 2em;
 }
 main .edit-links {
   text-align: right;
-  padding: 1em 2em;
+  padding: 4em 2em 1em;
 }
 main .edit-links a {
   padding: 0.5em;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,0.05);
   border-radius: 2px;
+  display: inline-block;
 }
 main .edit-links a svg {
   vertical-align: -2px;
