@@ -72,6 +72,9 @@ main aside>ul>li>ul>li ul {
   padding-left: 1em;
 }
 
+main.with-toc .content {
+  max-width: 42em;
+}
 main article {
   padding: 2em;
 }

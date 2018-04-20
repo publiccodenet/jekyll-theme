@@ -13,7 +13,7 @@
 
     <hr>
 
-    <main>
+    <main class="{% if site.toc or page.toc %}with-toc{% endif %}">
       <section class="content">
         <article class="markdown-body">
           {{ content }}
