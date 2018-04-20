@@ -26,6 +26,14 @@
         </div>
         {% endif %}
       </section>
+
+      {% if site.toc or page.toc %}
+      <aside>
+        <h4>On this page</h4>
+        {% include toc.liquid html=content h_min=2 %}
+      </aside>
+      {% endif %}
+
     </main>
 
     <hr>
