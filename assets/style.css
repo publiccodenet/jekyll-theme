@@ -34,8 +34,17 @@ p, h1, h2, h3, h4, h5, li {
 }
 
 a:link, a:visited {
-  color: black;
   text-decoration: underline;
+  color: black;
+}
+a:link {
+  text-decoration-color: blue;
+}
+a:visited {
+  text-decoration-color: purple;
+}
+a:link[href^='#'], a:visited[href^='#'] {
+  text-decoration-color: darkgrey;
 }
 a:hover {
   background: rgba(0,0,0,0.05);
