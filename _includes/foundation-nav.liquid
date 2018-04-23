@@ -4,11 +4,21 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 1rem;
   }
   @media only screen and (min-width:400px) {
-    nav.foundation-nav {
+    nav.foundation-nav, nav.foundation-nav ul {
       padding: 1rem;
     }
+  }
+
+  nav.foundation-nav ul {
+    list-style: none;
+    margin: 0;
+  }
+  nav.foundation-nav ul li {
+    padding: 0;
+    display: inline-block;
   }
 
   nav.foundation-nav a:link, header a:visited {
@@ -49,5 +59,8 @@
     <img src="https://brand.publiccode.net/logo/mark.svg" alt="The mark of the Foundation For Public Code looks like a little greek temple, or government building, in a hexagon">
     <p>Foundation For Public Code</p>
   </a>
-  <a href="https://about.publiccode.net/" title="About of the Foundation For Public Code">About</a>
+  <ul>
+    <li><a href="https://about.publiccode.net/" title="About of the Foundation For Public Code">About</a>
+    <li><a href="https://projects.publiccode.net/" title="Projects">Projects</a>
+  </ul>
 </nav>
