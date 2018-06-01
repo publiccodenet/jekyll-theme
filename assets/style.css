@@ -58,6 +58,7 @@ main {
 main aside {
   flex: 1;
   padding: 2em;
+  overflow: hidden;
 }
 main aside h4 {
   color: #ddd;
