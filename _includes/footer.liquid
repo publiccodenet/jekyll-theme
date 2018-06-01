@@ -26,8 +26,7 @@
   {% endif %}
 
   <!-- License information -->
-  {% assign license = site.license | default site.github.license %}
-  {% if license %}
+  {% if site.license or site.github.license %}
     <section>
       <h3>Copyright and license</h3>
       <p>
@@ -51,7 +50,7 @@
           {% endif %}
         {% endfor %}
         {% if license_file %}<a href="{{ site.baseurl }}/LICENSE.html">{% endif %}
-        {{ license.name }}
+        {{ site.license.name | default: site.github.license.name }}
         {% if license_file %}</a>{% endif %}
       </p>
     </section>
