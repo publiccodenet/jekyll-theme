@@ -13,7 +13,7 @@
 
     <hr>
 
-    <main class="{% if site.toc or page.toc %}with-toc{% endif %}">
+    <main class="{% if page.toc != false and site.toc == true or page.toc == true %}with-toc{% endif %}">
       <section class="content">
         <article class="markdown-body">
           {{ content }}
@@ -27,7 +27,7 @@
         {% endif %}
       </section>
 
-      {% if site.toc or page.toc %}
+      {% if page.toc != false and site.toc == true or page.toc == true %}
       <aside>
         <h4>On this page</h4>
         {% include toc.liquid html=content h_min=2 %}
