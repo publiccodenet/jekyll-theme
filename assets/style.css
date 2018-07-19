@@ -53,36 +53,46 @@ a:hover {
 main {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 2em;
 }
-main aside {
+ul.table-of-contents {
+  list-style: none;
   flex: 1;
-  padding: 2em;
+  padding: 4em 2em;
   overflow: hidden;
+  border-left: 1px solid #fdfdfd;
 }
-main aside h4 {
-  color: #ddd;
+ul.table-of-contents:before {
+  content: 'On this page';
+  /* text-transform: uppercase; */
+  color: #eaecef;
+  /* font-weight: bold; */
+  text-align: center;
+  font-size: 1em;
+  line-height: 2;
+  display: block;
+  border-bottom: 1px solid;
 }
-main aside ul {
-  padding-left: 0;
+
+ul.table-of-contents li {
+  margin: .5em 0;
+}
+ul.table-of-contents>li {
+  font-size: 1.15rem;
+  padding-bottom: 0.5em;
+}
+ul.table-of-contents>li>ul>li {
+  font-size: 1rem;
+}
+ul.table-of-contents>li ul {
+  padding-left: 1em;
   list-style: none;
 }
 
-main aside li {
-  margin: .5em 0;
+main section.content {
+  padding-top: 2em;
+  width: 100%;
 }
-main aside>ul>li {
-  font-weight: bold;
-  padding-bottom: 0.5em;
-}
-main aside>ul>li>ul>li {
-  font-weight: normal;
-}
-main aside>ul>li>ul>li ul {
-  padding-left: 1em;
-}
-
-main.with-toc .content {
+main.with-toc section.content {
   max-width: 42em;
 }
 main article {

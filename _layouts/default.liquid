@@ -28,10 +28,7 @@
       </section>
 
       {% if page.toc != false and site.toc == true or page.toc == true %}
-      <aside>
-        <h4>On this page</h4>
-        {% include toc.liquid html=content h_min=2 %}
-      </aside>
+        {% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" %}
       {% endif %}
 
     </main>
