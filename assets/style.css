@@ -19,14 +19,17 @@ body>hr {
   margin: 0;
 }
 
-nav.foundation-nav, header, main, footer {
-  max-width: 60em;
+body>nav, body>header, body>main, body>footer {
+  max-width: 68em;
   margin: auto;
   box-sizing: border-box;
+  padding: 2em 4em;
+  background-color: white;
 }
-
-header, main, footer {
-  background: white;
+@media only screen and (max-width:68em) {
+  body>nav, body>header, body>main, body>footer {
+    padding: 1em;
+  }
 }
 
 p, h1, h2, h3, h4, h5, li {
