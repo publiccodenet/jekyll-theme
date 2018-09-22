@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700');
 
 
-/* GENERAL */
+/* 
+ * General elements
+*/
 
 body {
   font-family: 'Muli', sans-serif;
@@ -13,27 +15,11 @@ body {
 
 hr {
   border: none;
-  border-bottom: 1px solid #ddd;
-}
-body>hr {
-  margin: 0;
-}
-
-body>nav#foundation-nav, body>header, body>main, body>footer {
-  /* max-width: 68em; */
-  /* margin: auto; */
-  box-sizing: border-box;
-  padding: 2em 4em;
-  background-color: white;
-}
-@media only screen and (max-width:68em) {
-  body>nav#foundation-nav, body>header, body>main, body>footer {
-    padding: 1em;
-  }
+  border-bottom: 1px solid lightgrey;
 }
 
 p, h1, h2, h3, h4, h5, li {
-  max-width: 35em
+  max-width: 35em;
 }
 
 a:link, a:visited {
@@ -53,41 +39,269 @@ a:hover {
   background: rgba(0,0,0,0.05);
 }
 
+/* 
+ * Layout
+*/
+
+body>hr {
+  margin: 0;
+}
+
+body>*:not(hr) {
+  box-sizing: border-box;
+  max-width: 75em;
+  margin: auto;
+}
+body.with-site-nav>*:not(hr) {
+  max-width: 100em;
+}
+
+body>nav#foundation-nav, body>header, body>footer {
+  padding: 1em;
+  background-color: white;
+}
+
+@media only screen and (min-width:68em) {
+  body>nav#foundation-nav, body>header, body>footer {
+    padding: 2em 4em;
+  }
+}
+
+/* 
+ * Foundation Navigation
+*/
+
+nav.foundation-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  background: none;
+}
+@media only screen and (min-width:400px) {
+  nav.foundation-nav {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width:64em) {
+  nav.foundation-nav {
+    padding: 1rem 4em;
+  }
+}
+
+nav.foundation-nav ul {
+  list-style: none;
+  margin: 0;
+}
+nav.foundation-nav ul li {
+  padding: 0;
+  display: inline-block;
+}
+
+nav.foundation-nav a:link, header a:visited {
+  font-weight: normal;
+  border-bottom: none;
+  padding: 1rem;
+}
+
+nav.foundation-nav a.logo-mark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  text-decoration: none;
+}
+@media only screen and (min-width:500px) {
+  nav.foundation-nav a.logo-mark {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width:400px) and (max-width:500px) {
+  nav.foundation-nav a.logo-mark {
+    font-size: 1.5em;
+  }
+}
+nav.foundation-nav a.logo-mark>img {
+  height: 2em;
+  margin-right: 0.5em;
+}
+nav.foundation-nav a.logo-mark>p {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 
+ * Site header
+*/
+
+header .site-title {
+  padding: 1em 1rem;
+  font-size: 1.5em;
+}
+@media only screen and (min-width:400px) {
+  header .site-title {
+    font-size: 2em;
+    padding: 1.5em 2rem;
+  }
+}
+@media only screen and (min-width:700px) {
+  header .site-title.home {
+    font-size: 4em;
+  }
+}
+header .site-title a {
+  text-decoration: none;
+}
+header .site-title a:hover {
+  text-decoration: underline;
+}
+
+/* 
+ * Site navigation
+*/
+
+input#show-site-nav {
+  display: none;
+}
+input#show-site-nav ~ label:before {
+  content: 'Open '
+}
+input#show-site-nav:checked ~ label:before {
+  content: 'Close '
+}
+
 nav#site-nav {
-  flex: 1, 1, auto;
-  border-right: 1px solid #ddd;
-  padding: 2em;
-  max-width: 18rem;
+  flex: 0 0 100%;
+  padding: 0;
+}
+nav#site-nav>ul {
+  display: none;
+}
+label[for=show-site-nav] {
+  display: block;
 }
 nav#site-nav a.active {
   background: white;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
+input#show-site-nav ~ label {
+  margin: 1em;
+  padding: 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 2px;
+  display: block;
 }
-ul.table-of-contents, nav#site-nav>ul {
-  list-style: none;
-  flex: 1;
-  padding: 4em 2em;
-  overflow: hidden;
-  border-left: 1px solid #fdfdfd;
+input#show-site-nav ~ label:hover, input#show-site-nav:checked ~ label {
+  background: grey;
+}
+input#show-site-nav:checked ~ ul {
+  display: block;
+}
+@media only screen and (min-width: 900px) {
+  nav#site-nav {
+    /* flex: 0 0 auto; */
+  }
 }
 
-ul.table-of-contents {
+@media only screen and (min-width: 1200px) {
+  nav#site-nav {
+    flex: 1 2 300px; 
+    padding: 0 2em;
+    border-right: 1px solid #ddd;
+  }
+  nav#site-nav>ul:before {
+    content: 'Pages on this site'
+  }
+  nav#site-nav label[for=show-site-nav] {
+    display: none;
+  }
+  nav#site-nav>ul {
+    display: inherit;
+  }
+}
+
+/* 
+ * Main content
+*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 900px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+main section.content {
+  flex: 2 2 auto;
   background: white;
 }
+main section.content article {
+  padding: 2em;
+}
+
+@media only screen and (min-width:1200px) {
+  main section.content {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width:1400px) {
+  main section.content {
+    padding: 4em;
+  }
+}
+
+/*
+ * Sidebar
+ */
+
+main section.sidebar {
+  flex: 1 2 300px; 
+  box-sizing: border-box;
+  background: white;
+}
+
+/*
+ * Table of contents
+*/
+
 ul.table-of-contents:before {
-  content: 'On this page';
-  /* text-transform: uppercase; */
+  content: 'Table of contents';
+}
+
+/*
+ * Navigation lists
+*/
+
+ul.table-of-contents:before, nav#site-nav>ul:before {
   color: #eaecef;
-  /* font-weight: bold; */
   text-align: center;
   font-size: 1em;
   line-height: 2;
   display: block;
   border-bottom: 1px solid;
+}
+
+ul.table-of-contents, nav#site-nav>ul {
+  /* min-width: 320px; */
+  list-style: none;
+  flex: 1 1 auto;
+  overflow: hidden;
+  margin: 0 0;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:1400px) {
+  ul.table-of-contents, nav#site-nav>ul {
+    padding: 5em 2em;
+    /* max-width: 17rem; */
+  }
 }
 
 ul.table-of-contents li, nav#site-nav>ul li {
@@ -105,22 +319,18 @@ ul.table-of-contents>li>ul>li, nav#site-nav>ul>li>ul>li {
   font-size: 1rem;
 }
 
-main section.content {
-  padding-top: 2em;
-  width: 100%;
-  background: white;
-}
-main.with-toc section.content {
-  max-width: 42em;
-}
-main article {
-  padding: 2em;
-}
+/* 
+ * Edit links
+*/
+
 main .edit-links {
-  text-align: right;
-  padding: 4em 2em 1em;
+  padding-left: 2em;
 }
-main .edit-links a {
+main .edit-links li {
+  list-style-type: none;
+}
+main .edit-links li a {
+  margin-bottom: 0.5em;
   padding: 0.5em;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,0.05);
@@ -129,4 +339,21 @@ main .edit-links a {
 }
 main .edit-links a svg {
   vertical-align: -2px;
+}
+
+/* 
+ * Footer
+ */
+
+ footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+footer section {
+  padding: 1rem;
 }
