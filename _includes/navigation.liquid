@@ -10,7 +10,7 @@
       
       {% if current == include.context %}
         <li>
-          <a href="{{ node.url }}" class="{% if page.url == node.url %}active{% endif %}">{{ node.title }}</a> 
+          <a href="{{ site.baseurl }}{{ node.url }}" class="{% if page.url == node.url %}active{% endif %}">{{ node.title }}</a> 
           {% if node.path contains 'index.' %}
             IS INDEX {{ node.dir }}
           {% endif %}
@@ -19,7 +19,7 @@
 
       {% if node.path contains 'index.' %}
         {% if index_current == include.context %}
-          <li><a href="{{ node.url }}" class="{% if page.url == node.url %}active{% endif %}">{{ node.title }}</a>
+          <li><a href="{{ site.baseurl }}{{ node.url }}" class="{% if page.url == node.url %}active{% endif %}">{{ node.title }}</a>
             {% include navigation.liquid context=node.url %}
           </li>
         {% endif %}
