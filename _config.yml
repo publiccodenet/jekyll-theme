@@ -25,3 +25,18 @@ license:
 
 # Enable Table of Contents displaying
 toc: true
+
+# Show the navigation
+show_navigation: true
+
+defaults:
+  -
+    scope:
+      path: "LICENSE.md"
+    values:
+      order: 100 # Show the license at the bottom of the navigation
+  -
+    scope:
+      path: "index.md"
+    values:
+      order: 0 # Show the index at the top of the navigation

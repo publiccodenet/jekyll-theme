@@ -1,26 +1,3 @@
-<style>
-  header {
-  }
-
-  header .site-title {
-    padding: 1.5em 2rem;
-    font-size: 1.5em;
-  }
-  @media only screen and (min-width:400px) {
-    header .site-title {
-      font-size: 2em;
-    }
-  }
-  @media only screen and (min-width:700px) {
-    header .site-title.home {
-      font-size: 4em;
-    }
-  }
-  header .site-title a {
-    text-decoration: none;
-  }
-</style>
-
 <header>
   {% if site.title %}
     <section class="site-title {% if page.url == '/' %} home {% endif %}">
