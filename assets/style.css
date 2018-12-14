@@ -56,13 +56,13 @@ body.with-site-nav>*:not(hr) {
   max-width: 100em;
 }
 
-body>nav#foundation-nav, body>header, body>footer {
+body>nav.foundation-nav, body>header, body>footer {
   padding: 1em;
   background-color: white;
 }
 
 @media only screen and (min-width:68em) {
-  body>nav#foundation-nav, body>header, body>footer {
+  body>nav.foundation-nav, body>header, body>footer {
     padding: 2em 4em;
   }
 }
@@ -356,4 +356,13 @@ main .edit-links a svg {
 
 footer section {
   padding: 1rem;
+}
+
+@media print {
+  body>nav.foundation-nav ul, nav#site-nav, section.sidebar {
+    display: none !important;
+  }
+  main {
+    display: block !important;
+  }
 }
