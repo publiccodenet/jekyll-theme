@@ -264,6 +264,8 @@ main section.sidebar {
   flex: 1 2 300px; 
   box-sizing: border-box;
   background: white;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -328,14 +330,21 @@ main .edit-links {
 }
 main .edit-links li {
   list-style-type: none;
+  /* display: inline; */
 }
 main .edit-links li a {
   margin-bottom: 0.5em;
   padding: 0.5em;
   text-decoration: none;
-  border: 1px solid whitesmoke;
   border-radius: 2px;
   display: inline-block;
+  border: 1px solid lightgrey;
+}
+main .edit-links li a:link {
+  border-bottom: 1px solid blue;
+}
+main .edit-links li a:visited {
+  border-bottom: 1px solid purple;
 }
 main .edit-links a svg {
   vertical-align: -2px;
@@ -345,7 +354,7 @@ main .edit-links a svg {
  * Footer
  */
 
- footer {
+footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
