@@ -36,7 +36,7 @@ a:link[href^='#'], a:visited[href^='#'] {
   text-decoration-color: darkgrey;
 }
 a:hover {
-  background: rgba(0,0,0,0.05);
+  background: whitesmoke;
 }
 
 /* 
@@ -182,19 +182,19 @@ label[for=show-site-nav] {
   display: block;
 }
 nav#site-nav a.active {
-  background: white;
+  font-weight: bold;
 }
 
 input#show-site-nav ~ label {
   margin: 1em;
   padding: 1rem;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid grey;
   border-radius: 2px;
   display: block;
 }
 input#show-site-nav ~ label:hover, input#show-site-nav:checked ~ label {
-  background: grey;
+  background: lightgrey;
 }
 input#show-site-nav:checked ~ ul {
   display: block;
@@ -209,7 +209,7 @@ input#show-site-nav:checked ~ ul {
   nav#site-nav {
     flex: 1 2 300px; 
     padding: 0 2em;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid lightgrey;
   }
   nav#site-nav>ul:before {
     content: 'Pages on this site'
@@ -271,7 +271,7 @@ main section.sidebar {
 */
 
 ul.table-of-contents:before {
-  content: 'Table of contents';
+  content: 'On this page';
 }
 
 /*
@@ -279,7 +279,7 @@ ul.table-of-contents:before {
 */
 
 ul.table-of-contents:before, nav#site-nav>ul:before {
-  color: #eaecef;
+  color: lightgrey;
   text-align: center;
   font-size: 1em;
   line-height: 2;
@@ -333,7 +333,7 @@ main .edit-links li a {
   margin-bottom: 0.5em;
   padding: 0.5em;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid whitesmoke;
   border-radius: 2px;
   display: inline-block;
 }
