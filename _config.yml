@@ -1,9 +1,6 @@
 title: Foundation For Public Code Jekyll Theme
 permalinks: pretty
 
-plugins:
-  - jekyll-feed
-
 include:
   - CONTRIBUTING.md
   - AUTHORS.md
