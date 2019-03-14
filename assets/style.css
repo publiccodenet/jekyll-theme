@@ -321,6 +321,45 @@ ul.table-of-contents>li>ul>li, nav#site-nav>ul>li>ul>li {
   font-size: 1rem;
 }
 
+/*
+ * Breadcrumbs
+ */
+
+#theme-breadcrumbs {
+  padding: 0 0 1em 0;
+  background-color: white;
+  flex-basis: 100%;
+}
+@media only screen and (min-width:900px) {
+  #theme-breadcrumbs {
+    padding: 0 2em 2em;
+  }
+}
+
+#theme-breadcrumbs ul {
+  padding: .5em;
+  margin: 0;
+  list-style: none;
+  line-height: 2em;
+}
+#theme-breadcrumbs li {
+  display: inline-block;
+  margin: -1.15em 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#theme-breadcrumbs li:not(:nth-last-of-type(1))::after {
+  content: '›';
+  display: inline-block;
+  opacity: 0.1;
+  font-size: 1em;
+  padding: .5em;
+  line-height: 0;
+}
+
 /* 
  * Edit links
 */
@@ -330,7 +369,6 @@ main .edit-links {
 }
 main .edit-links li {
   list-style-type: none;
-  /* display: inline; */
 }
 main .edit-links li a {
   margin-bottom: 0.5em;

@@ -1,4 +1,8 @@
 <main>
+  {% if page.breadcrumbs %}
+    {% include breadcrumbs.liquid %}
+  {% endif %}
+
   {% if site.show_navigation == true %}
       
     <nav id="site-nav">
@@ -8,6 +12,7 @@
 
   {% endif %}
   <section class="content">
+    
     <article class="markdown-body">
       {{ content }}
     </article>
