@@ -1,4 +1,4 @@
-# Foundation For Public Code Jekyll Theme
+# Foundation for Public Code Jekyll Theme
 
 [![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
 
