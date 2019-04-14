@@ -48,8 +48,8 @@ You can turn on the navigation by adding `show_navigation: true` to the `_config
 
 ## Licence
 
-© Foundation For Public Code 2018
+© Foundation for Public Code 2018
 
 The code in this repository is licensed under [EUPL 1.2](LICENSE.md).
 
-Logos, brands and trademarks of the Foundation For Public Code are licensed differently, check out https://brand.publiccode.net/ for more information.
+Logos, brands and trademarks of the Foundation for Public Code are licensed differently, check out https://brand.publiccode.net/ for more information.
