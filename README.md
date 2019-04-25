@@ -40,6 +40,22 @@ Will result in breadcrumbs like
 
 These can also be added as Jekyll default variables for every or specific pages.
 
+### Metadata
+
+Metadata for posts is to be displayed next to it if available, you can add metadata by adding front-matter like so:
+
+```markdown
+---
+type: Guide
+goal: something or other to put in this text here or there or everywhere wherever it makes sense
+author: Ben
+audience: Everyone
+expires: 2019-04-22
+---
+```
+
+The `expires` date is rendered by javascript and will highlight when expired.
+
 ### Navigation
 
 ⚠️ This feature is experimental and might be removed.

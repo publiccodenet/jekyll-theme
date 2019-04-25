@@ -388,6 +388,46 @@ main .edit-links a svg {
   vertical-align: -2px;
 }
 
+.metadata {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px darkgrey solid;
+}
+.metadata h3 {
+  margin-top: 0;
+}
+.metadata p {
+  margin: .5em 0 0 0;
+}
+.metadata .type {
+  margin-top: 0;
+  font-weight: bold;
+}
+.metadata>p:before {
+  content: attr(class) ': ';
+  text-transform: capitalize;
+  width: 6em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+.metadata [data-expired] {
+  color: red;
+}
+
+@media only screen and (min-width:900px) {
+  .metadata {
+    padding: 2em;
+  }
+  .metadata p {
+    margin-left: 8em;
+    margin-top: 1em;
+  }
+  .metadata>p:before {
+    margin-left: -8em;
+    float: left;
+  }
+}
+
 /* 
  * Footer
  */
