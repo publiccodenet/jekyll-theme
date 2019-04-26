@@ -390,16 +390,16 @@ main .edit-links a svg {
 }
 
 .metadata {
+  margin: 1em;
   padding: 1em;
-  margin-bottom: 1em;
-  border: 1px darkgrey solid;
+  border-left: .25em solid whitesmoke;
 }
 .metadata h3 {
-  margin-top: 0;
+  margin: 0;
   text-transform: capitalize;
 }
 .metadata p {
-  margin: .5em 0 0 0;
+  margin: .25em 0 0 0;
 }
 .metadata .type {
   margin-top: 0;
@@ -410,7 +410,6 @@ main .edit-links a svg {
   text-transform: capitalize;
   width: 6em;
   margin-bottom: 0.5em;
-  font-weight: bold;
 }
 .metadata [data-expired] {
   color: red;
@@ -418,11 +417,11 @@ main .edit-links a svg {
 
 @media only screen and (min-width:900px) {
   .metadata {
-    padding: 2em;
+    padding: 1em;
   }
   .metadata p {
     margin-left: 8em;
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
   .metadata>p:before {
     margin-left: -8em;
