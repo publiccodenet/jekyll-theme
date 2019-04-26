@@ -390,43 +390,24 @@ main .edit-links a svg {
 }
 
 .metadata {
-  margin: 1em;
-  padding: 1em;
-  border-left: .25em solid whitesmoke;
+  margin: 0 1em 0;
+  padding: .75em;
+  border-bottom: .25em solid whitesmoke;
+  display: block;
 }
-.metadata h3 {
-  margin: 0;
-  text-transform: capitalize;
+.metadata tbody {
+  width: 100%;
 }
-.metadata p {
+.metadata tr {
   margin: .25em 0 0 0;
 }
-.metadata .type {
-  margin-top: 0;
-  font-weight: bold;
-}
-.metadata>p:before {
-  content: attr(class) ': ';
-  text-transform: capitalize;
-  width: 6em;
-  margin-bottom: 0.5em;
-}
-.metadata [data-expired] {
+.metadata .expired {
   color: red;
 }
-
-@media only screen and (min-width:900px) {
-  .metadata {
-    padding: 1em;
-  }
-  .metadata p {
-    margin-left: 8em;
-    margin-top: 0.5em;
-  }
-  .metadata>p:before {
-    margin-left: -8em;
-    float: left;
-  }
+.metadata td, .metadata th {
+  padding: 0.25em;
+  text-align: left;
+  vertical-align: top;
 }
 
 /* 

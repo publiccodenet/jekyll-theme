@@ -1,26 +1,12 @@
-{% if page.type or page.explains or page.audience or page.author %}
-  <div class="metadata">
-    {% if page.type %}<h3>{{page.type}}</h3>{% endif %}
-    {% if page.explains %}<p class="explains">{{page.explains}}</p>{% endif %}
-    {% if page.audience %}<p class="audience">{{page.audience}}</p>{% endif %}
-    {% if page.author %}<p class="author">{{page.author}}</p>{% endif %}
-    {% if page.expires %}<p class="expires" id="metadata-expires">{{page.expires}}</p>{% endif %}
-  </div>
-{% endif %}
+{% capture currentDate %}{{ site.time | date: '%F' }}{% endcapture %}
+{% capture date %}{{ page.expires | date: '%F' }}{% endcapture %}
 
-{% if page.expires %}
-<script>
-  var expiresElement = document.getElementById('metadata-expires')
-  function renderExpiresIn(el) {
-    var date = new Date(el.innerHTML)
-    var today = new Date()
-    var isExpired = (today - date >= 0)
-    if (isExpired) {
-      el.setAttribute('data-expired', true)
-    }
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    el.innerHTML = el.innerHTML + ' (' + date.toLocaleDateString("en-UK", options) + ')'
-  }
-  renderExpiresIn(expiresElement)
-</script>
+{% if page.type or page.explains or page.audience or page.author %}
+  <table class="metadata">
+    {% if page.type %}<tr><th>{{page.type}}</th></tr>{% endif %}
+    {% if page.explains %}<tr><td>Explains:</td><td class="explains">{{page.explains}}</td></tr>{% endif %}
+    {% if page.audience %}<tr><td>For:</td><td class="audience">{{page.audience}}</td></tr>{% endif %}
+    {% if page.author %}<tr><td>By:</td><td class="author">{{page.author}}</td></tr>{% endif %}
+    {% if page.expires %}<tr class="{% if date < currentDate %}expired{% else %}not-expired{% endif %}"><td>Expires:</td><td class="expires">{{ page.expires | date: "%-d %B %Y" }} ({{page.expires}})</ttd></td>{% endif %}
+  </table>
 {% endif %}
