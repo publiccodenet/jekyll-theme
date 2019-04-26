@@ -1,7 +1,7 @@
-{% if page.type or page.goal or page.audience or page.author %}
+{% if page.type or page.explains or page.audience or page.author %}
   <div class="metadata">
     {% if page.type %}<h3>{{page.type}}</h3>{% endif %}
-    {% if page.goal %}<p class="goal">{{page.goal}}</p>{% endif %}
+    {% if page.explains %}<p class="explains">{{page.explains}}</p>{% endif %}
     {% if page.audience %}<p class="audience">{{page.audience}}</p>{% endif %}
     {% if page.author %}<p class="author">{{page.author}}</p>{% endif %}
     {% if page.expires %}<p class="expires" id="metadata-expires">{{page.expires}}</p>{% endif %}
