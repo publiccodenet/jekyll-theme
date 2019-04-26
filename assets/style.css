@@ -391,8 +391,8 @@ main .edit-links a svg {
 
 .metadata {
   margin: 0 1em 0;
-  padding: .75em;
-  border-bottom: .25em solid whitesmoke;
+  padding: .5em;
+  border-left: .25em solid whitesmoke;
   display: block;
 }
 .metadata tbody {
