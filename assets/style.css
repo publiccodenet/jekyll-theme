@@ -243,6 +243,7 @@ main section.content {
 }
 main section.content article {
   padding: 2em;
+  padding-bottom: 4em;
 }
 
 @media only screen and (min-width:1200px) {
