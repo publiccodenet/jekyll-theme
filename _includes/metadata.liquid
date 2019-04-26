@@ -8,19 +8,19 @@
   </div>
 {% endif %}
 
+{% if page.expires %}
 <script>
-function renderExpiresIn(el) {
-  var date = new Date(el.innerHTML)
-  var today = new Date()
-  var isExpired = (today - date >= 0)
-
-  if(isExpired) {
-    el.setAttribute('data-expired', true)
+  var expiresElement = document.getElementById('metadata-expires')
+  function renderExpiresIn(el) {
+    var date = new Date(el.innerHTML)
+    var today = new Date()
+    var isExpired = (today - date >= 0)
+    if (isExpired) {
+      el.setAttribute('data-expired', true)
+    }
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    el.innerHTML = el.innerHTML + ' (' + date.toLocaleDateString("en-UK", options) + ')'
   }
-
-  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  el.innerHTML = date.toLocaleDateString("en-UK", options)
-}
-
-renderExpiresIn(document.getElementById('metadata-expires'))
+  renderExpiresIn(expiresElement)
 </script>
+{% endif %}
