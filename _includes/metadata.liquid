@@ -9,4 +9,7 @@
     {% if page.author %}<tr><td>Author:</td><td class="author">{{page.author}}</td></tr>{% endif %}
     {% if page.expires %}<tr class="{% if date < currentDate %}expired{% else %}not-expired{% endif %}"><td>Expires:</td><td class="expires">{{ page.expires | date: "%-d %B %Y" }} ({{page.expires}})</ttd></td>{% endif %}
   </table>
+  {% if page.bpmn %}
+    {% include bpmn.liquid url=page.bpmn %}
+  {% endif %}
 {% endif %}

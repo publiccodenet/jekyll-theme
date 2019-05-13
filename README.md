@@ -51,10 +51,13 @@ explains: something or other to put in this text here or there or everywhere whe
 author: Ben
 audience: Everyone
 expires: 2019-04-22
+bpmn: process.bpmn
 ---
 ```
 
 The `expires` date is rendered by javascript and will highlight when expired.
+
+The `bpmn` takes a filename and will draw a BPMN diagram.
 
 ### Navigation
 
