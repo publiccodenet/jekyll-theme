@@ -7,6 +7,13 @@ include:
   - LICENSE.md
   - CONTRIBUTORS.md
 
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+
 # Exclude the `vendor` folder created by Travis
 exclude:
   - vendor
