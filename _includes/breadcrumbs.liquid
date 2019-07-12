@@ -1,9 +1,14 @@
+{% assign url_parts = page.url | split: '/' %}
+{% assign part_url = '' %}
+
 <nav id="theme-breadcrumbs">
   <ul>
-    <li><a href="{{ site.url }}">{{ site.title }}</a></li>
-    {% for item in page.breadcrumbs %}
-      <li><a href="{{ item.path }}">{{ item.name }}</a></li>
+    {% for part in url_parts %}
+    {% assign part_url = part_url | append: part | append: '/' %}
+    {% assign crumb = site.pages | where: 'url', part_url | first %}
+    {% if page.url != crumb.url %}
+    <li><a href="{{ crumb.url }}">{{ crumb.title | default: crumb.url }}</a></li>
+    {% endif %}
     {% endfor %}
-    <li>{{ page.title }}</li>
   </ul>
 </nav>

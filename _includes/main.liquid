@@ -1,10 +1,10 @@
 <main>
-  {% if page.breadcrumbs %}
+  {% if site.show_breadcrumbs %}
     {% include breadcrumbs.liquid %}
   {% endif %}
 
   {% if site.show_navigation == true %}
-      
+
     <nav id="site-nav">
       <input type="checkbox" id="show-site-nav"></input><label for="show-site-nav">Menu</label>
       {% include navigation.liquid context="/" %}

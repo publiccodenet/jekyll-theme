@@ -24,21 +24,13 @@ Or adding `toc: true` to the front matter of any page where you want the Table o
 
 ### Breadcrumbs
 
-You can add a breadcrumbs object to a page's front-matter with the name and path of the items that need to be in the breadcrumbs, the home page and the current page will be automatically added.
+You can turn on breadcrumbs for every page on the site by adding `show_breadcrumbs: true` to the `config.yml`.
 
-```yaml
-breadcrumbs:
-  - name: 'Important guidance'
-    path: '/x/'
-  - name: 'For everyone'
-    path: '/x/index.html'
-```
+Will result in breadcrumbs like:
 
-Will result in breadcrumbs like
+> Main index.md title > grandparent index.md title > parent index.md title
 
-> Site title > Important guidance > For everyone > Page title
-
-These can also be added as Jekyll default variables for every or specific pages.
+:warning: Performance hit: since for every breadcrumb the partial needs to find the indexes and titles this will likely add quite a bit of time to the generation of your site.
 
 ### Metadata
 

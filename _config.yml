@@ -31,7 +31,8 @@ license:
 toc: true
 
 # Show the navigation
-# show_navigation: true
+show_navigation: true
+show_breadcrumbs: true
 
 defaults:
   -
