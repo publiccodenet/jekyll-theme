@@ -51,6 +51,10 @@ The `expires` date is rendered by javascript and will highlight when expired.
 
 The `bpmn` takes a filename and will draw a BPMN diagram.
 
+### Foundation for Public Code footer
+
+You can remove the footer with the contact information and higher level navigation to the footer by setting `hide_foundation_footer: true` in the `_config.yml`.
+
 ### Navigation
 
 ⚠️ This feature is experimental and might be removed.

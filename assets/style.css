@@ -56,9 +56,12 @@ body.with-site-nav>*:not(hr) {
   max-width: 100em;
 }
 
+body>header, body>footer#site-footer {
+  background-color: white;
+}
+
 body>nav.foundation-nav, body>header, body>footer {
   padding: 1em;
-  background-color: white;
 }
 
 @media only screen and (min-width:68em) {

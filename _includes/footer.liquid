@@ -1,7 +1,8 @@
-<footer>
+<footer id="site-footer">
   <!-- GitHub repository information -->{% if site.github %}
     <section>
-      <h3>This project on GitHub</h3>
+      <h3>This site on GitHub</h3>
+      <p>This site was last published {{ site.time | date_to_long_string }} from the source at GitHub</p>
       <ul>
         <li><a href="{{ site.github.repository_url }}">{{ site.github.owner_name }}/{{ site.github.repository_name }}</a></li>
         <li><a class="github-button" href="{{ site.github.repository_url }}" data-icon="octicon-star" data-count-href="{{ site.github_username }}/{{ github_repo }}/stargazers" data-count-api="/repos/{{ site.github_username }}/{{ github_repo }}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star {{ site.github_username }}/{{ github_repo }} on GitHub">Star</a></li>
@@ -41,3 +42,34 @@
     </section>
   {% endif %}
 </footer>
+{% if site.hide_foundation_footer != true %}
+<footer id="foundation-footer">
+  <section>
+    <h3>
+    <a href="https://about.publiccode.net">About us</a>
+    </h3>
+    <p>Together, we’re growing an ecosystem of open public-purpose software and policy.</p>
+    <p>More on <a href="https://about.publiccode.net">about.publiccode.net</a></p>
+  </section>
+  <section>
+    <h3><a href="https://projects.publiccode.net">Our projects</a></h3>
+    <p>Open products we're researching or developing to further our mission.</p>
+    <p>More on <a href="https://projects.publiccode.net">projects.publiccode.net</a></p>
+  </section>
+  <section>
+    <h3><a href="https://about.publiccode.net/organization/contact-details.html">Contact</a></h3>
+    <ul>
+      <li>Join our <a href="https://forms.gle/gn7wR2Eaxbv5g1BF9">mailing list</a>
+      <li>Email: <a href="mailto:info@publiccode.net">info@publiccode.net</a></li>
+      <li>Address:
+      <address>
+        Keizersgracht 617, 1017 DS, Amsterdam, the Netherlands
+      </address></li>
+      <li>Twitter: <a href="https://twitter.com/publiccodenet">@publiccodenet</a>
+    </ul>
+  </section>
+  <section>
+    <p>Foundation for Public Code vereniging (met volledige rechtsbevoegdheid) <a href="https://about.publiccode.net/organization/governance-model.html" title="Governance model">is a member owned association</a> registered under <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=74996452" title="KVK registration">chamber of commerce (KvK) registration 74996452</a>.</p>
+  </section>
+</footer>
+{% endif %}
