@@ -1,11 +1,12 @@
-<section class="sidebar">
-
+<section class="page-information">
+  {% include metadata.liquid %}
   {% if page.toc != false and site.toc == true or page.toc == true %}
+    <h3 id="page-table-of-contents">Contents</h3>
     {% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" %}
   {% endif %}
   {% if site.github.repository_url %}
+    <h3 id="page-edit-links">Contribute using GitHub</h3>
     <ul class="edit-links">
-      <li><h5>Contribute using GitHub</h5></li>
       <!-- The default branch is {% for repo in site.github.public_repositories %}{% if repo.name == site.github.repository_name %}{% assign default_branch = repo.default_branch %}{% endif %}{% endfor %}{{ default_branch }}, while site.github.source.branch is {{ site.github.source.branch }} -->
       <li><a href="{{ site.github.repository_url }}/edit/{{ default_branch }}/{{ page.path }}">{% include github-pr.svg %} Improve this page</a></li>
       <li><a href="{{ site.github.repository_url }}/issues/new?body=I'd like to report an issue in `{{ page.path }}`">{% include github-issue.svg %} File an Issue</a></li>

@@ -4,12 +4,11 @@
 {% if page.type or page.explains or page.audience or page.author %}
   <table class="metadata">
     {% if page.type %}<tr><th>{{page.type}}</th></tr>{% endif %}
+    {% if post.date %}<tr><td>Date:</td><td>{{ post.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
+    {% if page.date %}<tr><td>Date:</td><td>{{ page.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
     {% if page.explains %}<tr><td>Explains:</td><td class="explains">{{page.explains}}</td></tr>{% endif %}
     {% if page.audience %}<tr><td>Audience:</td><td class="audience">{{page.audience}}</td></tr>{% endif %}
     {% if page.author %}<tr><td>Author:</td><td class="author">{{page.author}}</td></tr>{% endif %}
     {% if page.expires %}<tr class="{% if date < currentDate %}expired{% else %}not-expired{% endif %}"><td>Expires:</td><td class="expires">{{ page.expires | date: "%-d %B %Y" }} ({{page.expires}})</ttd></td>{% endif %}
   </table>
-  {% if page.bpmn %}
-    {% include bpmn.liquid url=page.bpmn %}
-  {% endif %}
 {% endif %}
