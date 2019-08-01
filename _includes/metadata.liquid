@@ -2,8 +2,8 @@
 {% capture date %}{{ page.expires | date: '%F' }}{% endcapture %}
 
 {% if page.type or page.explains or page.audience or page.author %}
+  <h3 id="page-metadata">This {{page.type}}</h3>
   <table class="metadata">
-    {% if page.type %}<tr><th>{{page.type}}</th></tr>{% endif %}
     {% if post.date %}<tr><td>Date:</td><td>{{ post.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
     {% if page.date %}<tr><td>Date:</td><td>{{ page.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
     {% if page.explains %}<tr><td>Explains:</td><td class="explains">{{page.explains}}</td></tr>{% endif %}
