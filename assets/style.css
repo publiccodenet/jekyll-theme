@@ -134,8 +134,9 @@ a:hover {
     font-size: .75rem;
   }
   a[href^="/"]:after {
-    content: "" attr(href) "";
-    font-size: .75rem;
+    /* content: "" attr(href) "";
+    font-size: .75rem; */
+    display: none;
   }
   a[href^="#"]:after {
     content: "" target-counter(attr(href), page);
