@@ -6,13 +6,13 @@
     {% capture toc %}{% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" %}{% endcapture %}
 
     {% if toc != blank %}
-      <h4 id="page-table-of-contents">Contents</h4>
+      <h3 id="page-table-of-contents">Contents</h3>
       {{ toc }}
     {% endif %}
   {% endif %}
   
   {% if site.github.repository_url %}
-    <h4 id="page-edit-links">Contribute on GitHub</h4>
+    <h3 id="page-edit-links">Contribute on GitHub</h3>
     <ul class="edit-links">
       <!-- The default branch is {% for repo in site.github.public_repositories %}{% if repo.name == site.github.repository_name %}{% assign default_branch = repo.default_branch %}{% endif %}{% endfor %}{{ default_branch }}, while site.github.source.branch is {{ site.github.source.branch }} -->
       <li><a href="{{ site.github.repository_url }}/edit/{{ default_branch }}/{{ page.path }}">{% include github-pr.svg %} Edit this page</a></li>
