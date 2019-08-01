@@ -115,7 +115,8 @@ a:hover {
     width: 30vw;
     margin-right: -7cm;
     margin-right: -30vw;
-    padding: 0 0 0.25em .20em;
+    padding: 0 0 0.25em .25em;
+    margin-bottom: .25em;
     line-height: 1.25;
     text-align: left;
     float: right;
@@ -123,11 +124,16 @@ a:hover {
     text-decoration: none;
     font-weight: normal;
   }
+  /* Add `[href^="http"]` for limiting to external sites */
   a[href^="http"]:link {
     color: black;
     text-decoration: underline;
   }
   a[href^="http"]:after {
+    content: "" attr(href) "";
+    font-size: .75rem;
+  }
+  a[href^="/"]:after {
     content: "" attr(href) "";
     font-size: .75rem;
   }
