@@ -418,6 +418,7 @@ input#show-site-nav:checked ~ ul {
 @media print {
   main {
     display: block !important;
+    page-break-after: always;
   }
   main+hr {
     display: none;
@@ -429,7 +430,14 @@ input#show-site-nav:checked ~ ul {
  */
 
 #bpmn-canvas {
+  height: 50vh;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  max-width: 50em;
   margin-bottom: 1em;
+}
+#bpmn-canvas .bjs-powered-by {
+  display: none;
 }
 
 /*
@@ -610,11 +618,6 @@ main .edit-links a svg {
  * Metadata display
  */
 
-.metadata {
-  margin: 0 1em 0;
-  border-left: .25em solid whitesmoke;
-  display: block;
-}
 .metadata tbody {
   width: 100%;
 }
@@ -625,7 +628,7 @@ main .edit-links a svg {
   color: red;
 }
 .metadata td, .metadata th {
-  padding: 0.25em;
+  padding: 0, 0.5em, 0.5em, 0;
   text-align: left;
   vertical-align: top;
 }
@@ -650,6 +653,6 @@ main .edit-links a svg {
 }
 @media print {
   footer {
-    page-break-before: always;
+    page-break-after: always;
   }
 }
