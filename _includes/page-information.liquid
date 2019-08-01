@@ -1,9 +1,16 @@
 <section class="page-information">
+
   {% include metadata.liquid %}
+
   {% if page.toc != false and site.toc == true or page.toc == true %}
-    <h3 id="page-table-of-contents">Contents</h3>
-    {% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" %}
+    {% capture toc %}{% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" %}{% endcapture %}
+
+    {% if toc != blank %}
+      <h3 id="page-table-of-contents">Contents</h3>
+      {{ toc }}
+    {% endif %}
   {% endif %}
+  
   {% if site.github.repository_url %}
     <h3 id="page-edit-links">Contribute using GitHub</h3>
     <ul class="edit-links">
@@ -12,4 +19,5 @@
       <li><a href="{{ site.github.repository_url }}/issues/new?body=I'd like to report an issue in `{{ page.path }}`">{% include github-issue.svg %} File an Issue</a></li>
     </ul>
   {% endif %}
+
 </section>
