@@ -51,7 +51,7 @@ hr {
 }
 
 @media screen {
-  p, h1, h2, h3, h4, h5, ul {
+  p, h1, h2, h3, h4, h5, ul, pre, blockquote, .highlight {
     max-width: 35em;
     max-width: calc(30rem + 5em);
   }
