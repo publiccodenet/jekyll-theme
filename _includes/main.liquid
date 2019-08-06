@@ -3,6 +3,10 @@
     {% include breadcrumbs.liquid %}
   {% endif %}
 
+  {% if site.titles_from_headings.strip_title == true%}
+    <h1>{{ page.title | default: post.title }}</h1>
+  {% endif %}
+
   {% if site.show_navigation == true %}
 
     <nav id="site-nav">

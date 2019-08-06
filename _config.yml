@@ -51,3 +51,5 @@ defaults:
     values:
       order: 100 # Show the license at the bottom of the navigation
 
+titles_from_headings:
+  strip_title: true

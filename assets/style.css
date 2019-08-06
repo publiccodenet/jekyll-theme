@@ -398,7 +398,7 @@ input#show-site-nav:checked ~ ul {
     background: white;
   }
   main>* {
-    padding: 2em;
+    padding: 2rem;
     box-sizing: border-box;
     max-width: 100%;
   }
@@ -407,6 +407,10 @@ input#show-site-nav:checked ~ ul {
   }
   main #theme-breadcrumbs {
     flex-basis: 100%;
+  }
+  main>h1 {
+    flex-basis: 100%;
+    margin: 0;
   }
   main .content {
     flex: 2 2 60%;
@@ -419,6 +423,9 @@ input#show-site-nav:checked ~ ul {
 @media screen and (min-width:68em) {
   main {
     padding: 4em;
+  }
+  main>h1 {
+    font-size: 4em;
   }
 }
 
@@ -560,12 +567,13 @@ input#show-site-nav:checked ~ ul {
  */
 
 #theme-breadcrumbs {
-  padding: 0 0 1em 0;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: white;
 }
 
 #theme-breadcrumbs ul {
-  padding: .5em;
+  padding: 0;
   margin: 0;
   list-style: none;
   line-height: 2em;

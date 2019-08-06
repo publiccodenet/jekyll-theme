@@ -61,6 +61,15 @@ You can remove the footer with the contact information and higher level navigati
 
 You can turn on the navigation by adding `show_navigation: true` to the `_config.yml`. The position of items can be set on  the `order` property in the front-matter or in the `_config.yml`, and whether a page displays can be set by setting `hidden: true`.
 
+### Rendering the title seperately
+
+You can render the title, which is often automatically extracted as the first `H1` in the document by setting the [Jekyll Titles from Headings](https://github.com/benbalter/jekyll-titles-from-headings) to strip the titles:
+
+```yaml
+titles_from_headings:
+  strip_title: true
+```
+
 ## Licence
 
 © Foundation for Public Code 2018
