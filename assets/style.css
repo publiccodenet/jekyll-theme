@@ -449,6 +449,7 @@ input#show-site-nav:checked ~ ul {
   border: 1px solid lightgrey;
   border-radius: 2px;
   max-width: 50em;
+  max-height: 50vw;
   margin-bottom: 1em;
 }
 #bpmn-canvas .bjs-powered-by {
