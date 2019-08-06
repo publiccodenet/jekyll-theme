@@ -426,6 +426,7 @@ input#show-site-nav:checked ~ ul {
   }
   main>h1 {
     font-size: 4em;
+    margin-bottom: .25em;
   }
 }
 
