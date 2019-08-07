@@ -592,7 +592,7 @@ input#show-site-nav:checked ~ ul {
 #theme-breadcrumbs li:not(:nth-last-of-type(1))::after {
   content: '›';
   display: inline-block;
-  opacity: 0.1;
+  opacity: 0.3;
   font-size: 1em;
   padding: .5em;
   line-height: 0;
