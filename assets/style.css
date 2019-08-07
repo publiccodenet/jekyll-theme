@@ -589,7 +589,7 @@ input#show-site-nav:checked ~ ul {
   overflow: hidden;
 }
 
-#theme-breadcrumbs li:not(:nth-last-of-type(1))::after {
+#theme-breadcrumbs li::after {
   content: '›';
   display: inline-block;
   opacity: 0.3;
