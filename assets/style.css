@@ -469,6 +469,10 @@ input#show-site-nav:checked ~ ul {
   display: none;
 }
 
+main .content p:first-of-type {
+  font-size: 1.15em;
+}
+
 /*
  * Markdown content
  */
