@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: single-page
+---
 
-  {% include head.liquid %}
-
-  <body class="{% if page.toc != false and site.toc == true or page.toc == true %}with-toc{% endif %} {% if site.show_navigation == true %}with-site-nav{% endif %}">
-
-    {% include foundation-nav.liquid %}
-        
-    {% include header.liquid %}
-
-    <hr>
-
-    {% include main.liquid %}
-
-    <hr>
-
-    {% include footer.liquid %}
-
-    {% include foundation-nav.liquid %}
-
-    {% include foundation-footer.liquid %}
-
-  </body>
-
-</html>
+<section class="content">
+  {% if page.bpmn %}
+    <h3>Process <abbr title="Business Process Model and Notation is a graphical representation for specifying business processes in a business process model.">
+      BPMN
+    </abbr></h3>
+    {% include bpmn.liquid url=page.bpmn %}
+  {% endif %}
+  <article class="markdown-body">
+    {{ content }}
+  </article>
+</section>
