@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en'}}">
+
+  <link rel="canonical" href="{{ page.redirect_to }}"/>
+  <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+
+  {% include head.liquid %}
+
+  <body class="{% if page.toc != false and site.toc == true or page.toc == true %}with-toc{% endif %} {% if site.show_navigation == true %}with-site-nav{% endif %}">
+
+    {% include theme-nav.liquid %}
+
+    <main>
+
+    <h2>Moved</h2>
+
+    <p>This page has been moved to <a href="{{page.redirect_to}}">{{page.redirect_to}}</a></p>
+
+    <article>{{ content }}</article>
+    </main>
+
+    {% include theme-nav.liquid %}
+
+    {% include theme-footer.liquid %}
+
+  </body>
+
+</html>
