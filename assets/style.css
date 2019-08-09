@@ -74,6 +74,9 @@ img, code {
 }
 
 @media print {
+  ul, ol {
+    page-break-inside: avoid;
+  }
   ul li, ol li {
     margin: .5em 0;
   }
