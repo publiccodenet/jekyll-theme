@@ -8,7 +8,7 @@
     {% assign crumb = site.pages | where: 'url', part_url | first %}
     {% if crumb.url != blank %}
     {% if page.url != crumb.url %}
-    <li><a href="{{ crumb.url }}">{{ crumb.title | default: crumb.url }}</a></li>
+    <li><a href="{{ crumb.url }}">{{ crumb.title | default: crumb.dir }}</a></li>
     {% endif %}
     {% endif %}
     {% endfor %}

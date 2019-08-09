@@ -448,7 +448,7 @@ input#show-site-nav:checked ~ ul {
   }
   main .page-information {
     page-break-after: always;
-}
+  }
 }
 
 /* 
@@ -531,7 +531,7 @@ input#show-site-nav:checked ~ ul {
     display: block;
     border-bottom: 1px solid;
   }
-  ul.table-of-contents, nav#site-nav>ul {
+  ol.table-of-contents, nav#site-nav>ul {
     list-style: none;
     flex: 1 1 auto;
     overflow: hidden;
@@ -540,18 +540,18 @@ input#show-site-nav:checked ~ ul {
     box-sizing: border-box;
   }
 
-  ul.table-of-contents li, nav#site-nav>ul li {
+  ol.table-of-contents li, nav#site-nav>ul li {
     margin: .5em 0;
   }
-  ul.table-of-contents>li, nav#site-nav>ul>li {
+  ol.table-of-contents>li, nav#site-nav>ul>li {
     font-size: 1.15rem;
     padding-bottom: 0.5em;
   }
-  ul.table-of-contents>li ul, nav#site-nav>ul>li ul {
+  ol.table-of-contents>li ol, nav#site-nav>ul>li ul {
     padding-left: 1em;
     list-style: none;
   }
-  ul.table-of-contents>li>ul>li, nav#site-nav>ul>li>ul>li {
+  ol.table-of-contents>li>ol>li, nav#site-nav>ul>li>ul>li {
     font-size: 1rem;
   }
 }
