@@ -469,7 +469,7 @@ input#show-site-nav:checked ~ ul {
   display: none;
 }
 
-main .content p:first-of-type {
+main .content>article>:first-child:not(h1):not(h2):not(ol):not(ul) {
   font-size: 1.15em;
 }
 
