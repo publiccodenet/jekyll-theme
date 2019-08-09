@@ -70,6 +70,10 @@ titles_from_headings:
   strip_title: true
 ```
 
+### Language
+
+The `lang` configuration is used in the `html` tag `lang` attribute.
+
 ## Licence
 
 © Foundation for Public Code 2018
