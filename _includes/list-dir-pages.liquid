@@ -1,12 +1,13 @@
 <ul id="sitemap-list">
 
+    <pre><code>{{include.dir}} - {{ site.pages | where: "url", include.url | first }}</code></pre>
+    
     {% comment %} 
     Create a header for the   with a link to the index
     {% endcomment %}
     {% assign dir_index = site.pages | where: "url", include.dir | first %}
     <lh>
         <a href="{{ dir_index.url }}">{{ dir_index.title | default: dir_index.dir }}</a>
-        {% comment %} <details><pre>{{ index }}</pre></details> {% endcomment %}
     </lh>
 
     {% comment %}
@@ -14,6 +15,9 @@
     {% endcomment %}
 
     {% assign indexes = site.pages | where: "name", "index.md" | sort: "name" | sort: "order" %}
+    {% assign indexes = site.pages | where: "name", "index.html" | sort: "name" | sort: "order" | concat: indexes %}
+
+    <pre><code>{{ indexes }}</code></pre>
 
     {% for index in indexes %}
         {% comment %}
