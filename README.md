@@ -51,6 +51,17 @@ The `expires` date is rendered by javascript and will highlight when expired.
 
 The `bpmn` takes a filename and will draw a BPMN diagram.
 
+### Redirecting from a page
+
+In order to redirect a page use the `redirected` layout by adding the following front-matter:
+
+```yaml
+type: Resource
+layout: redirected
+sitemap: false
+redirect_to: https://example.net/some-url
+```
+
 ### Foundation for Public Code footer
 
 You can remove the footer with the contact information and higher level navigation to the footer by setting `hide_foundation_footer: true` in the `_config.yml`.
