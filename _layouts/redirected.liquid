@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en'}}">
 
-  <link rel="canonical" href="{{ page.redirect_to }}"/>
-  <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
-
   {% include head.liquid %}
 
   <body class="{% if page.toc != false and site.toc == true or page.toc == true %}with-toc{% endif %} {% if site.show_navigation == true %}with-site-nav{% endif %}">
