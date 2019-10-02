@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
 
-A jekyll theme for the set up of quick generic static sites and for use with GitHub pages.
+A [jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with GitHub pages.
 
 ## Building locally
 
