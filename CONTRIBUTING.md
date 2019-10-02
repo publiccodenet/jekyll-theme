@@ -38,7 +38,10 @@ It could be that your contribution can be merged immediately by a maintainer. Ho
 
 If your documentation and code have passed human review, it is merged.
 
-### 4. Celebrate
+### 4. Governance
+Larger functionality changes or breaking changes will also be reviewed according to our [governance model](GOVERNANCE.md).
+
+### 5. Celebrate
 
 Your ideas, documentation and code have become an integral part of this project. You are the open source hero we need!
 
