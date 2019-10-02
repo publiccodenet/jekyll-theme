@@ -1,8 +1,8 @@
-# Foundation for Public Code Jekyll Theme
+# Foundation for Public Code Jekyll theme
 
 [![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
 
-A jekyll theme for the set up of quick generic static sites and for use with GitHub pages.
+This is a Jekyll theme for the set up of quick generic static sites and for use with GitHub pages. The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability. 
 
 ## Building locally
 
@@ -74,7 +74,7 @@ You can turn on the navigation by adding `show_navigation: true` to the `_config
 
 ### Rendering the title seperately
 
-You can render the title, which is often automatically extracted as the first `H1` in the document by setting the [Jekyll Titles from Headings](https://github.com/benbalter/jekyll-titles-from-headings) to strip the titles:
+You can render the title, which is often automatically extracted as the first `H1` in the document by setting the [Jekyll titles from headings](https://github.com/benbalter/jekyll-titles-from-headings) to strip the titles:
 
 ```yaml
 titles_from_headings:
