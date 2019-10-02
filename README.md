@@ -4,6 +4,8 @@
 
 This is a [jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability.
 
+This project is meant internally for the Foundation for Public Code as we try to create version controlled single sources of truth and hyperlinked content that can be transformed and collated whenever needed.
+
 ## Building locally
 
 This theme is built to run predictably on GitHub pages, therefore the [`github-pages`](https://github.com/github/pages-gem) gem is required. Run `bundle install` before building with Jekyll.
