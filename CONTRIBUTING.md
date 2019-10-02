@@ -39,7 +39,7 @@ It could be that your contribution can be merged immediately by a maintainer. Ho
 If your documentation and code have passed human review, it is merged.
 
 ### 4. Governance
-Larger functionality changes or breaking changes will also be reviewed according to our [governance model](GOVERNANCE.md).
+Larger functionality changes or breaking changes will also be reviewed according to our [governance model](governance.md).
 
 ### 5. Celebrate
 
