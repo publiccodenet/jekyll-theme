@@ -34,7 +34,7 @@ Will result in breadcrumbs like:
 
 ### Metadata
 
-Metadata for posts is to be displayed next to it if available, you can add metadata by adding front-matter like so:
+If available, the metadata for a post will be displayed next to it. You can add metadata by adding front-matter as followed:
 
 ```markdown
 ---
