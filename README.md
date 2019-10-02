@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
 
-This is a [jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability.
+This is a [Jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability.
 
 This project is meant internally for the Foundation for Public Code as we try to create version controlled single sources of truth and hyperlinked content that can be transformed and collated whenever needed.
 
