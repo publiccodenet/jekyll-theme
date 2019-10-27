@@ -73,7 +73,7 @@ You can remove the footer with the contact information and higher level navigati
 
 ⚠️ This feature is experimental and might be removed.
 
-You can turn on the navigation by adding `show_navigation: true` to the `_config.yml`. The position of items can be set on  the `order` property in the front-matter or in the `_config.yml`, and whether a page displays can be set by setting `hidden: true`.
+You can turn on the navigation by adding `show_navigation: true` to the `_config.yml`. The position of items can be set on the `order` property in the front-matter or in the `_config.yml`. You can hide a page by setting `hidden: true`.
 
 ### Rendering the title seperately
 
