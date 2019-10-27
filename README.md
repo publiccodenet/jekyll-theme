@@ -2,7 +2,10 @@
 
 [![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
 
-This is a [jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability.
+This is a [Jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability. [Read more about how this codebase is updated and who's involved in decisionmaking](/governance.md).
+
+This project is meant internally for the Foundation for Public Code as we try to create version controlled single sources of truth and hyperlinked content that can be transformed and collated whenever needed.
+
 
 ## Building locally
 
@@ -34,7 +37,7 @@ Will result in breadcrumbs like:
 
 ### Metadata
 
-Metadata for posts is to be displayed next to it if available, you can add metadata by adding front-matter like so:
+If available, the metadata for a post will be displayed next to it. You can add metadata by adding front-matter as follows:
 
 ```markdown
 ---
@@ -70,7 +73,7 @@ You can remove the footer with the contact information and higher level navigati
 
 ⚠️ This feature is experimental and might be removed.
 
-You can turn on the navigation by adding `show_navigation: true` to the `_config.yml`. The position of items can be set on  the `order` property in the front-matter or in the `_config.yml`, and whether a page displays can be set by setting `hidden: true`.
+You can turn on the navigation by adding `show_navigation: true` to the `_config.yml`. The position of items can be set on the `order` property in the front-matter or in the `_config.yml`. You can hide a page by setting `hidden: true`.
 
 ### Rendering the title seperately
 
