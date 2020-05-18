@@ -30,7 +30,7 @@ Will result in breadcrumbs like:
 
 > Main index.md title > grandparent index.md title > parent index.md title
 
-:warning: Performance hint: The partial needs to find the indexes and titles for every breadcrumb. This will likely add quite a bit of time to the generation of your site.
+:warning: This will slow down the build as the partial needs to find the indexes and titles for every breadcrumb. This will likely add quite a bit of time to the generation of your site.
 
 ### Metadata
 
