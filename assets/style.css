@@ -666,4 +666,7 @@ main .edit-links a svg {
   footer {
     page-break-after: always;
   }
+  #search-repository {
+    display: none;
+  }
 }
