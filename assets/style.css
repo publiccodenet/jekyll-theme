@@ -335,8 +335,7 @@ input#show-site-nav:checked ~ label:before {
 }
 
 nav#site-nav {
-  flex: 0 0 100%;
-  padding: 0;
+  padding: 1rem;
 }
 nav#site-nav>ul {
   display: none;
@@ -363,27 +362,10 @@ input#show-site-nav:checked ~ ul {
   display: block;
 }
 
-@media screen and (min-width: 1200px) {
-  nav#site-nav {
-    flex: 1 2 300px; 
-    padding: 0 2em;
-    border-right: 1px solid lightgrey;
-  }
-  nav#site-nav>ul:before {
-    content: 'Pages on this site'
-  }
-  nav#site-nav label[for=show-site-nav] {
-    display: none;
-  }
-  nav#site-nav>ul {
-    display: inherit;
-  }
-}
-
-
 @media print {
   nav#site-nav, input#show-site-nav {
     display: none !important;
+    /* Hide navigation from all print */
   }
 }
 
@@ -558,12 +540,6 @@ main .content>article>:first-child:not(h1):not(h2):not(ol):not(ul) {
   }
   ol.table-of-contents>li>ol>li, nav#site-nav>ul>li>ul>li {
     font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  nav#site-nav>ul {
-    padding: 5em 2em;
   }
 }
 

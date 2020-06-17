@@ -7,15 +7,6 @@
     <h1>{{ page.title | default: post.title }}</h1>
   {% endif %}
 
-  {% if site.show_navigation == true %}
-
-    <nav id="site-nav">
-      <input type="checkbox" id="show-site-nav"></input><label for="show-site-nav">Menu</label>
-      {% include navigation.liquid context="/" %}
-    </nav>
-
-  {% endif %}
-
   {% include content.liquid %}
 
   {% include page-information.liquid %}
