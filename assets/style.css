@@ -152,6 +152,32 @@ a:hover {
 }
 
 /* 
+Buttons
+*/
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  display: inline-block;
+  background: none;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+input:focus, button:focus {
+  border: 1px solid black;
+  background: whitesmoke;
+}
+button:hover {
+  background: whitesmoke;
+}
+button svg {
+  vertical-align: -2px;
+}
+
+/* 
  * general layout
 */
 
@@ -660,6 +686,9 @@ main .edit-links a svg {
   footer section {
     padding: 1rem;
     max-width: 20rem;
+  }
+  #search-repository>button {
+    border-bottom-color: blue;
   }
 }
 @media print {
