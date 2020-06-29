@@ -9,6 +9,12 @@
         <li><a href="{{ site.github.repository_url }}/issues/">Issues</a></li>
         <li><a href="{{ site.github.repository_url }}/pulls/">Pull requests</a></li>
       </ul>
+
+      <form id="search-repository" action="{{ site.github.repository_url }}/search" method="GET">
+        <input name="q" type="text" placeholder="Search source on GitHub">
+        <button type="Submit">{% include github-search.svg %} Search</button>
+      </form>
+
     </section>
   {% endif %}
 
