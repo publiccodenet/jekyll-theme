@@ -1,8 +1,10 @@
 {% capture currentDate %}{{ site.time | date: '%F' }}{% endcapture %}
 {% capture date %}{{ page.expires | date: '%F' }}{% endcapture %}
 
-{% if page.type or page.explains or page.audience or page.author %}
+{% if page.type %}
   <h2 id="page-metadata">This {{ page.type | downcase }}</h2>
+{% endif %}
+{% if post.date or page.date or page.explains or page.audience or page.author or page.expires %}
   <table class="metadata">
     {% if post.date %}<tr><td>Date:</td><td>{{ post.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
     {% if page.date %}<tr><td>Date:</td><td>{{ page.date | date: '%-d %B %Y' }}</td></tr>{% endif %}
