@@ -1,4 +1,29 @@
 <footer id="site-footer">
+  <!-- Release information -->
+  {% if site.github and site.github.releases and site.github.releases[0] %}
+    <section>
+      {% assign latestRelease = site.github.releases[0] %}
+
+      <h3>Version {{ latestRelease.tag_name }}{% if latestRelease.prerelease == true %} (pre-release){% endif %}</h3>
+      <p>Published <a href="{{ latestRelease.html_url }}">{{ latestRelease.published_at | date_to_long_string }} on GitHub</a></p>
+      <p>{{ latestRelease.name }}</p>
+
+      <ul>
+        {% for asset in latestRelease.assets %}
+          <li>
+            <a href="{{ asset.browser_download_url }}" download><code>{{ asset.name }}</code></a>
+          </li>
+        {% endfor %}
+        <li>
+          Source archive in 
+          <a href="{{ latestRelease.zipball_url }}" download><code>.zip</code></a>
+          or
+          <a href="{{ latestRelease.tarball_url }}" download><code>.tar.gz</code></a>
+        </li>
+      </ul>
+    </section>
+  {% endif %}
+
   <!-- GitHub repository information -->
   {% if site.github %}
     <section>
