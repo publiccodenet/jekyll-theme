@@ -711,7 +711,7 @@ main .edit-links a svg {
 
   .footer-duo {
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -751,6 +751,9 @@ main .edit-links a svg {
     max-width: none;
     padding-left: 30px;
     box-sizing: border-box;
+  }
+  .footer-note-cluster {
+    margin-top: 30px;
   }
   .footer-last-updated::before {
     content:'';
