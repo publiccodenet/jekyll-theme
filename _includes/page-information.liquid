@@ -2,7 +2,7 @@
 
   {% include metadata.liquid %}
 
-  {% if page.toc == true and site.toc == true %}
+  {% if page.toc != false and site.toc == true or page.toc == true %}
     {% capture toc %}{% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" ordered=true %}{% endcapture %}
 
     {% if toc != blank %}
