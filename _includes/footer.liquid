@@ -21,6 +21,9 @@
           <a href="{{ latestRelease.tarball_url }}" download><code>.tar.gz</code></a>
         </li>
       </ul>
+      {% if site.include_badges %}
+      {% include badges.html %}
+      {% endif %}
     </section>
   {% endif %}
 
