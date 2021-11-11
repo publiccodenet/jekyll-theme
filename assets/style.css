@@ -448,6 +448,18 @@ input#show-site-nav:checked ~ ul {
     flex-basis: 100%;
     order: 0;
   }
+  main .theme-prev-next {
+    flex-basis: 100%;
+    order: 0;
+  }
+  main .theme-prev-next-prev {
+    float:left;
+    margin-right: 5px;
+  }
+  main .theme-prev-next-next {
+    float:right;
+    margin-left: 5px;
+  }
   main>h1 {
     flex-basis: 100%;
     margin: 0;
