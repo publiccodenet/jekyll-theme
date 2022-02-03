@@ -5,11 +5,13 @@
 {% for otherpage in sorted %}
 {% if otherpage.order == prev_order %}
 <span id="span-prev" class="theme-prev-next-prev"><a
-href="{{ otherpage.url }}">&#8592; {{ otherpage.title }}</a></span>
+		     href="{{site.baseurl}}{{ otherpage.url }}"
+		     >&#8592; {{ otherpage.title }}</a></span>
 {% endif %}
 {% if otherpage.order == next_order %}
 <span id="span-next" class="theme-prev-next-next"><a
-href="{{ otherpage.url }}">{{ otherpage.title }} &#8594;</a></span>
+		     href="{{site.baseurl}}{{ otherpage.url }}"
+		     >{{ otherpage.title }} &#8594;</a></span>
 {% endif %}
 {% endfor %}
 </span><!-- span-prev-next -->
