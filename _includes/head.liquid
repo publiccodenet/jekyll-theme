@@ -16,5 +16,9 @@
   {% endif %}
 
   <link rel="icon" href="https://brand.publiccode.net/logo/mark-128w128h.png">
-  <script async defer data-domain="publiccode.net" src="https://plausible.io/js/plausible.js"></script>
+
+  {% assign urlparts = site.url | split: '/' %}
+  {% assign subdomain = urlparts[2] | default: 'publiccode.net' %}
+
+  <script async defer data-domain="{{ subdomain }}" src="https://plausible.io/js/plausible.js"></script>
 </head>
