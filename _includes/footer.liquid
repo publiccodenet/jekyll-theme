@@ -33,12 +33,6 @@
       <h3>This site on GitHub</h3>
       <p>This site was last published {{ site.time | date_to_long_string }} from the <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a> repository on GitHub.</p>
 
-      <ul>
-        <li><a href="{{ site.github.repository_url }}">Content and code</a></li>
-        <li><a href="{{ site.github.repository_url }}/issues/">Issues</a></li>
-        <li><a href="{{ site.github.repository_url }}/pulls/">Pull requests</a></li>
-      </ul>
-
       <form id="search-repository" action="{{ site.github.repository_url }}/search" method="GET">
         <input name="q" type="text" placeholder="Search source on GitHub">
         <button type="Submit">{% include github-search.svg %} Search</button>
