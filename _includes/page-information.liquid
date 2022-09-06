@@ -11,6 +11,11 @@
     {% endif %}
   {% endif %}
   
+  {% if feed != blank %}
+      <h3 id="page-feed">Feed</h3>
+      <a href="{{ site.url }}/feed">Subscription feed</a>
+  {% endif %}
+ 
   {% if site.github.repository_url %}
     <h3 id="page-edit-links">Contribute on GitHub</h3>
     <ul class="edit-links">
