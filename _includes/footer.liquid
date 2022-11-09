@@ -71,7 +71,7 @@
               {% assign license_file = true %}
           {% endif %}
         {% endfor %}
-        {% if license_file %}<a href="{{ site.baseurl }}/LICENSE.html">{% endif %}
+        {% if license_file %}<a href="{{ site.baseurl }}/LICENSE.html" rel="license">{% endif %}
         {{ site.license.name | default: site.github.license.name }}
         {% if license_file %}</a>{% endif %}
       </p>
