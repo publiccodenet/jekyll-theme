@@ -14,7 +14,7 @@ plugins:
   - jemoji
   - jekyll-mentions
 
-# Exclude the `vendor` folder created by Travis
+# Exclude the `vendor` folder created by build process
 exclude:
   - vendor
 
