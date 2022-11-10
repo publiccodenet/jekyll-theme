@@ -1,6 +1,6 @@
 # Foundation for Public Code Jekyll theme
 
-[![Build Status](https://travis-ci.org/publiccodenet/jekyll-theme.svg?branch=master)](https://travis-ci.org/publiccodenet/jekyll-theme)
+[![pages-build-deployment](https://github.com/publiccodenet/jekyll-theme/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/publiccodenet/jekyll-theme/actions/workflows/pages/pages-build-deployment)
 
 This is a [Jekyll theme](https://jekyllrb.com/docs/themes/) for the set up of quick generic static sites and for use with [GitHub pages](https://pages.github.com/). The Foundation for Public Code uses this on all of its website for consistency and maintainability. We've designed this to keep as much content as possible in Markdown to preserve mutability. [Read more about how this codebase is updated and who's involved in decisionmaking](/governance.md).
 
