@@ -65,6 +65,8 @@ sitemap: false
 redirect_to: https://example.net/some-url
 ```
 
+This is how we [redirect pages](https://about.publiccode.net/about/activities/documentation).
+
 ### Foundation for Public Code footer
 
 You can remove the footer with the contact information and higher level navigation to the footer by setting `hide_foundation_footer: true` in the `_config.yml`.
