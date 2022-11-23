@@ -65,7 +65,7 @@ sitemap: false
 redirect_to: https://example.net/some-url
 ```
 
-This is how we [redirect pages](https://about.publiccode.net/about/activities/documentation).
+This is how we [redirect pages](https://about.publiccode.net/activities/documentation).
 
 ### Foundation for Public Code footer
 
