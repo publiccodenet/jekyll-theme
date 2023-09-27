@@ -1,8 +1,8 @@
 <ul id="sitemap-list">
 
     {% comment %} <pre><code>{{include.dir}} - {{ site.pages | where: "url", include.url | first }}</code></pre> {% endcomment %}
-    
-    {% comment %} 
+
+    {% comment %}
     Create a header for the   with a link to the index
     {% endcomment %}
     {% assign dir_index = site.pages | where: "url", include.dir | first %}

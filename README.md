@@ -19,7 +19,7 @@ To serve locally with Jekyll, use `script/serve.sh`
 
 #### For your whole site
 
-You can turn on the display of Table of Contents ('On this page' section) for any page by adding `toc: true` to the `_config.yml` 
+You can turn on the display of Table of Contents ('On this page' section) for any page by adding `toc: true` to the `_config.yml`
 
 #### For just a specific page
 
