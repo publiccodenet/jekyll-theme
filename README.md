@@ -11,7 +11,7 @@ This project is meant internally for the Foundation for Public Code as we try to
 
 This theme is built to run predictably on GitHub pages, therefore the [`github-pages`](https://github.com/github/pages-gem) gem is required. Run `bundle install` before building with Jekyll.
 
-To serve locally with Jekyll, use `bundle exec jekyll serve`.
+To serve locally with Jekyll, use `script/serve.sh`
 
 ## Customising
 
