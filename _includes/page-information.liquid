@@ -3,7 +3,9 @@
   {% include metadata.liquid %}
 
   {% if page.toc != false and site.toc == true or page.toc == true %}
-    {% capture toc %}{% include toc.liquid html=content h_min=2 sanitize=true class="table-of-contents" ordered=true %}{% endcapture %}
+    {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %}
+    {% assign my_max = page.toc_max | default: site.toc_max | default: 4 %}
+    {% capture toc %}{% include toc.liquid html=content h_min=my_min h_max=my_max sanitize=true class="table-of-contents" ordered=true %}{% endcapture %}
 
     {% if toc != blank %}
       <h3 id="page-table-of-contents">Contents</h3>
