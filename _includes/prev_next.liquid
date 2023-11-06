@@ -6,11 +6,13 @@
 {% if otherpage.order == prev_order %}
 <span id="span-prev" class="theme-prev-next-prev"><a
 		     href="{{site.baseurl}}{{ otherpage.url }}"
+		     rel="prev"
 		     >&#8592; {{ otherpage.title }}</a></span>
 {% endif %}
 {% if otherpage.order == next_order %}
 <span id="span-next" class="theme-prev-next-next"><a
 		     href="{{site.baseurl}}{{ otherpage.url }}"
+		     rel="next"
 		     >{{ otherpage.title }} &#8594;</a></span>
 {% endif %}
 {% endfor %}
